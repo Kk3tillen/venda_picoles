@@ -2,9 +2,9 @@ package Modelos;
 
 public class Picole {
 
-    private String sabor;
-    private int tamanho;
-    private double valor;
+    private String sabor = "'indefinido'";
+    private int tamanho = 0;
+    private double valor = 0;
 
     public String getSabor() {
         return sabor;
@@ -28,5 +28,14 @@ public class Picole {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return "Picole{" +
+                "sabor=" + sabor +
+                ", tamanho=" + tamanho +
+                ", valor=" + valor +
+                '}';
     }
 }

@@ -1,10 +1,10 @@
 package Testes;
 
-import Modelos.Picole;
+import Modelos.Sorvete;
 
-public class TestePicole {
+public class TesteSorvete {
     public static void main(String[] args) {
         System.out.println("Testando o teste");
-        System.out.println(new Picole());
+        System.out.println(new Sorvete());
     }
 }

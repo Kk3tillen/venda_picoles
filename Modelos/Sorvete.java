@@ -2,9 +2,9 @@ package Modelos;
 
 public class Sorvete {
     private double valor;
-    private String sabor;
+    private String sabor = "'indefinido'";
     private double tamanho;
-    private String tipo;
+    private String tipo = "'indefinido'";
 
     public double getValor() {
         return valor;
@@ -36,5 +36,15 @@ public class Sorvete {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public String toString() {
+        String ret = "Sorvete{";
+        ret += "sabor:" + this.sabor;
+        ret += ", tipo:" + this.tipo;
+        ret += ", tamanho:" + this.tamanho;
+        ret += ", valor:" + this.valor;
+        ret += "}";
+        return ret;
     }
 }
