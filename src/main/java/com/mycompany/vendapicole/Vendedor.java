@@ -8,7 +8,6 @@ package com.mycompany.vendapicole;
 import java.util.ArrayList;
 
 /**
- *
  * @author kezia
  */
 
@@ -18,27 +17,33 @@ public class Vendedor {
     private ArrayList<Picole> picoles = new ArrayList<>();
     private ArrayList<Sorvete> sorvetes = new ArrayList<>();
     private double valorRecebido;
-    
-    public void Vendedor(){
-        
+
+    public void Vendedor() {
+
     }
+
     public void vender(Produto produto) {
         valorRecebido += produto.getValor();
-        if(produto instanceof Picole){
-            picoles.remove((Picole)produto);
-        } else if(produto instanceof Sorvete){
-            sorvetes.remove((Sorvete)produto);
+        if (produto instanceof Picole) {
+            picoles.remove((Picole) produto);
+        } else if (produto instanceof Sorvete) {
+            sorvetes.remove((Sorvete) produto);
         }
     }
-    public void addProduto(Produto produto){
-        if(produto instanceof Picole){
-            picoles.add((Picole)produto);
-        } else if(produto instanceof Sorvete){
-            sorvetes.add((Sorvete)produto);
+
+    public void addProdutos() {
+        this.valorRecebido = valorRecebido;
+    }
+
+    public void addProduto(Produto produto) {
+        if (produto instanceof Picole) {
+            picoles.add((Picole) produto);
+        } else if (produto instanceof Sorvete) {
+            sorvetes.add((Sorvete) produto);
         }
     }
-    
-    
+
+
     public String getNome() {
         return nome;
     }
@@ -66,5 +71,9 @@ public class Vendedor {
     @Override
     public String toString() {
         return "Vendedor{" + "nome=" + nome + ", picoles=" + picoles + ", sorvetes=" + sorvetes + ", valorRecebido=" + valorRecebido + '}';
+    }
+
+    public void menuVendedor(Vendedor vendedor) {
+
     }
 }
